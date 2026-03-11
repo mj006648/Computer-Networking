@@ -1,0 +1,29 @@
+<!-- index_vulnerable.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>취약한 날씨 앱</title>
+</head>
+<body>
+    <h1>날씨 정보 (취약한 버전)</h1>
+    <p>도시: <span id="city"></span></p>
+    <p>온도: <span id="temp"></span></C>
+    <p>날씨: <span id="weather"></span></p>
+
+    <script>
+        const apiKey = "23e1c43e06ebbf18f7886c1f70760514";
+        const city = "Seoul";
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("city").innerText = data.name;
+                document.getElementById("temp").innerText = data.main.temp + " °C";
+                document.getElementById("weather").innerText = data.weather[0].main;
+            })
+            .catch(error => console.error("Error:", error));
+    </script>
+</body>
+</html>
