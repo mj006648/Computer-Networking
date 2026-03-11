@@ -1,2 +1,2 @@
 # Computer-Networking
-GIST AI융합학과 컴퓨터 네트워킹 과제
+Understand the fundamentals of "How Internet works", "What is Internet Protocol (IP)", "How the reliable communication work (TCP/UDP)", "How traffic get routed and reach the destination", "Different types of Networking Applications and Middleware". Through this course students will capture network raw packets and analyse them, They will also develop chatbot to understand network programming, They will also get a chance to use Cisco Packet Tracer to deploy a simple network with several devices.
